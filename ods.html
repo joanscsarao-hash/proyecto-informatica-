@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoPlato | Sobre el ODS 12</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+       
+            --bg-dark: #593737;
+            --bg-surface: #6e4a4a;
+            --accent: #ffb38a;
+            --text-main: #f4eee8;
+            --text-dim: #c9b4a9;
+            --glass-border: rgba(255, 179, 138, 0.2);
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            background: radial-gradient(circle at 50% 50%, #6e4a4a 0%, var(--bg-dark) 100%);
+            min-height: 100vh;
+        }
+
+       
+        nav {
+            padding: 25px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(15px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(244, 238, 232, 0.05);
+            background-color: rgba(89, 55, 55, 0.8);
+        }
+
+        .logo { font-weight: 800; font-size: 1.4rem; letter-spacing: -1px; text-transform: uppercase; }
+        .logo span { color: var(--accent); }
+
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
+
+         .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: var(--transition);
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover, .nav-links a.active { 
+            color: var(--accent);
+            border: 1px solid var(--glass-border);
+            background: rgba(255, 179, 138, 0.05);
+        }
+
+     
+        .content-wrapper {
+            padding: 150px 8% 80px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .badge {
+            background: rgba(255, 179, 138, 0.1);
+            color: var(--accent);
+            padding: 6px 16px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            display: inline-block;
+            border: 1px solid var(--glass-border);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 6vw, 4rem);
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 30px;
+            letter-spacing: -2px;
+        }
+
+        h1 span { color: var(--accent); }
+
+        .ods-card {
+            background: var(--bg-surface);
+            padding: 50px;
+            border-radius: 12px;
+            border: 1px solid rgba(244, 238, 232, 0.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .ods-card p {
+            font-size: 1.15rem;
+            color: var(--text-dim);
+            margin-bottom: 30px;
+        }
+
+        .highlight-box {
+            background: rgba(89, 55, 55, 0.5);
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+            margin-top: 40px;
+        }
+
+        .highlight-box h2 {
+            font-size: 1.2rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .highlight-box p {
+            font-size: 1rem;
+            color: var(--text-main);
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+
+        footer {
+            padding: 40px 8%;
+            border-top: 1px solid rgba(244, 238, 232, 0.05);
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-dim);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .ods-card { padding: 30px; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Eco<span>Plato</span></div>
+        <div class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="ods.html" class="active">Ods</a>
+            <a href="registro.html">Registrio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="educacion.html">Educación</a>
+        </div>
+    </nav>
+
+    <main class="content-wrapper">
+        <div class="badge">Naciones Unidas / Agenda 2030</div>
+        
+        <div class="ods-card">
+            <h1>Objetivo 12: <span>Producción y Consumo Responsables</span></h1>
+            
+            <p>
+                El ODS 12 busca garantizar modalidades de consumo y producción sostenibles en todo el mundo. 
+                Se trata de desvincular el crecimiento económico de la degradación medioambiental e impulsar 
+                la eficiencia en el uso de los recursos.
+            </p>
+
+            <p>
+                En el contexto de los <strong>comedores escolares</strong>, este objetivo cobra una relevancia vital. 
+                Cada plato que termina en la basura representa una pérdida de biodiversidad, agua y energía 
+                que nuestro planeta ya no puede permitirse.
+            </p>
+
+            <div class="highlight-box">
+                <h2>Nuestra Meta Escolar</h2>
+                <p>
+                    Reducir a la mitad el desperdicio de alimentos por estudiante y fomentar la cultura del 
+                    "plato limpio" mediante auditorías de sobras inteligentes y procesos de compostaje orgánico.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div>EcoPlato © 2026 / Terracota System</div>
+        <div>ODS 12 COMPLIANCE</div>
+    </footer>
+
+</body>
+</html>

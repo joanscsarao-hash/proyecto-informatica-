@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoPlato | Zero Waste Revolution</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+           
+            --bg-dark: #593737;       
+            --bg-surface: #6e4a4a;      
+            --accent: #ffb38a;         
+            --text-main: #f4eee8;       
+            --text-dim: #c9b4a9;      
+            --glass-border: rgba(255, 179, 138, 0.2);
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            overflow-x: hidden;
+            background: radial-gradient(circle at 50% 50%, #6e4a4a 0%, var(--bg-dark) 100%);
+        }
+
+        nav {
+            padding: 25px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(15px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(244, 238, 232, 0.05);
+            background-color: rgba(89, 55, 55, 0.8);
+        }
+
+        .logo { font-weight: 800; font-size: 1.4rem; letter-spacing: -1px; text-transform: uppercase; }
+        .logo span { color: var(--accent); }
+
+        .nav-links { display: flex; align-items: center; }
+
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: var(--transition);
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: 1px solid transparent;
+        }
+
+        .nav-links a:hover { color: var(--accent); }
+
+      
+        .nav-links a.active {
+            color: var(--accent);
+            border: 1px solid var(--glass-border);
+            background: rgba(255, 179, 138, 0.05);
+            box-shadow: 0 0 15px rgba(255, 179, 138, 0.1);
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 10%;
+        }
+
+        .badge {
+            background: rgba(255, 179, 138, 0.1);
+            color: var(--accent);
+            padding: 6px 16px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            border: 1px solid var(--glass-border);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 10vw, 6rem);
+            font-weight: 800;
+            line-height: 0.9;
+            margin-bottom: 25px;
+            letter-spacing: -4px;
+        }
+
+        h1 em { font-style: normal; color: var(--accent); }
+
+        .hero p {
+            max-width: 550px;
+            color: var(--text-dim);
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+
+        .main-btn {
+            background: var(--accent);
+            color: var(--bg-dark); /* Texto oscuro sobre fondo claro */
+            padding: 18px 38px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 0.9rem;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .main-btn:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 15px 30px rgba(255, 179, 138, 0.3);
+            filter: brightness(1.05);
+        }
+
+        .features {
+            padding: 80px 8%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .f-card {
+            background: var(--bg-surface);
+            border-bottom: 2px solid rgba(244, 238, 232, 0.05);
+            padding: 45px;
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+
+        .f-card:hover {
+            border-bottom: 2px solid var(--accent);
+            transform: scale(1.02);
+            background-color: #7a5555;
+        }
+
+        .f-card h3 { 
+            font-size: 0.8rem; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            margin-bottom: 20px; 
+            color: var(--accent); 
+        }
+
+        .f-card p { 
+            color: var(--text-main); 
+            font-size: 1.2rem; 
+            font-weight: 400;
+            line-height: 1.4;
+        }
+
+        .action-box {
+            margin: 80px 8%;
+            background: var(--bg-surface);
+            border: 2px solid var(--glass-border);
+            padding: 100px 40px;
+            text-align: center;
+            border-radius: 12px;
+        }
+
+        .action-box h2 { 
+            font-size: 3.5rem; 
+            color: var(--text-main); 
+            margin-bottom: 20px; 
+            letter-spacing: -3px;
+            line-height: 1;
+        }
+
+        .action-box h2 span { color: var(--accent); }
+
+        .action-box p { color: var(--text-dim); font-weight: 500; margin-bottom: 40px; }
+
+        footer {
+            padding: 40px 8%;
+            border-top: 1px solid rgba(244, 238, 232, 0.05);
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-dim);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 3.5rem; }
+            .action-box h2 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Eco<span>Plato</span></div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Inicio</a>
+            <a href="ods.html">Ods</a>
+            <a href="registro.html">Registrio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="educacion.html">Educación</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="badge">ODS 12: CONSUMO RESPONSABLE</div>
+        <h1>Comer bien.<br><em>No tirar nada</em>.</h1>
+        <p>Optimizamos el consumo en comedores escolares mediante análisis de datos y conciencia colectiva.</p>
+        <a href="educacion.html" class="main-btn">Saber mas</a>
+    </header>
+
+    <section class="features" id="impacto">
+        <div class="f-card">
+            <h3>Situación Actual</h3>
+            <p>El 40% de los recursos alimentarios en escuelas terminan eliminados sistemáticamente.</p>
+        </div>
+        <div class="f-card">
+            <h3>Impacto Directo</h3>
+            <p>Cada gramo desperdiciado es energía térmica y recursos hídricos perdidos para siempre.</p>
+        </div>
+        <div class="f-card">
+            <h3>Nuestra Meta</h3>
+            <p>Reducción del 85% de residuos sólidos mediante el sistema de gestión EcoPlato.</p>
+        </div>
+    </section>
+
+    <section class="action-box" id="unete">
+        <h2>¿Listo para el <span>cambio</span>?</h2>
+        <p>Implementa EcoPlato en tu institución hoy mismo.</p>
+        <a href="registro.html" class="main-btn">COMENZAR AHORA</a>
+    </section>
+    <footer>
+        <div>EcoPlato © 2026 / Terracota System</div>
+        <div>ODS 12 COMPLIANCE</div>
+    </footer>
+
+</body>
+</html>
